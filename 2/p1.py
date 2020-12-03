@@ -66,7 +66,7 @@ for i in inputlist:
 
     regexinput2 = regexinput.split()
     print(regexinput, datainput, range1, range2, result, result in range(int(range1), int(range2)+1))
-    if (result in range(int(range1), int(range2)+1)):
+    if (result in range(int(range1), int(range2)+1)): # range2 tiene que sumar 1 para incluirlo
         count += 1
 
 print(count)
