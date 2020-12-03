@@ -12,9 +12,7 @@ def searchPolicyRange(str):
 
 def isPolicyOk(ran1, ran2, car, str):
     # if (a and not b) or (not a and b)
-    if (str[ran1] == car) and (str[an2] != car) ):
-        return True
-    if (str[ran2] == car):
+    if (((str[ran1] == car) and (str[ran2] != car)) or ((str[ran1] != car) and (str[ran2] == car)) ):
         return True
     else:
         return False
@@ -42,6 +40,7 @@ for i in inputlist:
     regexinput2 = regexinput.split()
     print(regexinput, datainput, range1, range2, c, isPolicyOk(int(range1), int(range2), c, datainput))
 #    if (result in range(int(range1), int(range2)+1)): # ranbe2 tiene que sumar 1 para incluirlo
-#        count += 1
+    if (isPolicyOk(int(range1), int(range2), c, datainput)):
+        count += 1
 
 print(count)
